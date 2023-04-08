@@ -1,0 +1,27 @@
+post http://localhost:5000/register
+Content-Type: application/json
+
+{
+  "username": "adam_ric",
+  "name": "Adam Richard",
+  "password": "richa",
+  "gender": "male",
+  "location": "Detroit"
+}
+###
+post http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567"
+}
+###
+put http://localhost:5000/change-password
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "oldPassword": "richard_567",
+  "newPassword": "richard@123"
+}
